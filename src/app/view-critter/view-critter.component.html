@@ -1,0 +1,31 @@
+<div class="container">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Seach Critter</mat-label>
+      <input matInput placeholder="Ex. Carp" />
+    </mat-form-field>
+  </form>
+
+  <mat-card *ngIf="critter !== null">
+    <mat-card-header>
+      <mat-card-title>
+        {{ critter?.name | uppercase }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        "How can it snap without fingers?" - Blathers
+      </mat-card-subtitle>
+      <img mat-card-avatar src="assets/images/animalCrossingLogo.png" />
+    </mat-card-header>
+    <div class="image-container">
+      <img class="critter-image" src="assets/images/snappingTurtle.png" />
+    </div>
+    <mat-card-content>
+      <p>Seasonality (Northern): {{ critter?.northernSeasonality }}</p>
+      <p>
+        Active Hours: {{ critter?.activeHourBegin }} -
+        {{ critter?.activeHourEnd }}
+      </p>
+      <p>Location: {{ critter?.location }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

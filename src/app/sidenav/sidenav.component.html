@@ -1,0 +1,18 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav>
+    <button (click)="sidenav.toggle()">CLICK ME</button>
+    <div>
+      View Fishes
+    </div>
+    <div>
+      View Insects
+    </div>
+    <div>
+      View Fossils
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button (click)="sidenav.toggle()">CLICK ME</button>
+    <app-view-critter></app-view-critter>
+  </mat-sidenav-content>
+</mat-sidenav-container>

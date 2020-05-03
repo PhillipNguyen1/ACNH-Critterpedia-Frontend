@@ -4,25 +4,10 @@
   margin: 1rem auto;
 }
 
-.image-container {
-  background-size: cover;
-  max-height: 400px;
-}
-
 .critter-image {
   width: auto;
   max-width: 100%;
   height: auto;
-}
-
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-}
-
-.search-field {
-  width: 50%;
 }
 
 .card-container {
@@ -38,5 +23,94 @@ table {
 }
 
 .header {
-  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.radio-button-margin {
+  margin-right: 1rem;
+}
+
+tr.detail-row {
+  height: 0;
+}
+
+tr.element-row:not(.expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.element-row:not(.expanded-row):active {
+  background: #efefef;
+}
+
+.element-row td {
+  border-bottom-width: 0;
+}
+
+.element-detail {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image-container {
+  min-width: 80px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.element-description {
+  width: 100%;
+  margin: 8px 0 16px 8px;
+}
+
+.element-description-attribution {
+  margin-top: 8px;
+  opacity: 0.5;
+}
+
+.critter-image {
+  width: inherit;
+  height: inherit;
+}
+
+.filter {
+  width: 25%;
+}
+
+.seasonality-table {
+  width: 35%;
+}
+
+.seasonality-table,
+.seasonality-data {
+  border: 1px solid black;
+}
+
+.active-season {
+  background-color: #b2ebf2; // TODO
+}
+
+.quote {
+  margin-top: 0px;
+  font-style: italic;
 }

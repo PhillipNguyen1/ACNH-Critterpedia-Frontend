@@ -1,7 +1,7 @@
 // define 3 theme color
 // mat-palette accepts $palette-name, main, lighter and darker variants
 $animal-crossing-primary: mat-palette($mat-green, A100, 50, A400);
-$animal-crossing-accent: mat-palette($mat-cyan, A100, 50, A400);
+$animal-crossing-accent: mat-palette($mat-cyan, 100, 50, A400);
 $animal-crossing-warn: mat-palette($mat-pink);
 
 // Create the theme object (a Sass map containing all of the palettes).

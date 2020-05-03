@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CritterService } from '../critter.service';
+import convertTime from 'convert-time';
+import { Observable } from 'rxjs';
 import { Critter } from 'src/models/Critter';
+import { Color } from 'src/shared/color-enums';
+import { CritterService } from '../critter.service';
 
 @Component({
   selector: 'app-view-critter',
@@ -8,15 +11,25 @@ import { Critter } from 'src/models/Critter';
   styleUrls: ['./view-critter.component.scss'],
 })
 export class ViewCritterComponent implements OnInit {
-  critter: Critter;
-  critterId = '5ea7c4d1752f814410d7183c'; // ID of Snapping Turtle
+  critter$: Observable<Critter[]>;
+  columns: string[] = ['name', 'location', 'time'];
+  Color = Color;
 
   constructor(private critterService: CritterService) {}
 
   ngOnInit() {
-    this.critterService.getFishById(this.critterId).subscribe((critter) => {
-      this.critter = critter;
-      console.log(this.critter);
-    });
+    this.critter$ = this.critterService.getFishes();
+  }
+
+  // Take in 2 times and convert to proper format
+  formatTime(beginTime: string, endTime: string): string {
+    if (beginTime === endTime) {
+      return 'All Day';
+    }
+
+    const formattedBeginTime = convertTime(beginTime);
+    const formattedEndTime = convertTime(endTime);
+
+    return `${formattedBeginTime} - ${formattedEndTime}`;
   }
 }

@@ -3,9 +3,21 @@ mat-sidenav {
 }
 
 .sidenav-container {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  // height: 100%;
+}
+
+.sidenav {
+  background-color: #fff3e0; // TODO: Fix how we do background color with theme
+}
+
+.sidenav-content {
+  height: 95vh; // TODO: fix this
+  padding: 16px;
+  background-color: #fff3e0; // TODO: Fix how we do background color with theme
+}
+
+.sidenav-option {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
 }

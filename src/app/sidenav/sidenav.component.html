@@ -1,18 +1,21 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav>
-    <button (click)="sidenav.toggle()">CLICK ME</button>
-    <div>
-      View Fishes
-    </div>
-    <div>
-      View Insects
-    </div>
-    <div>
-      View Fossils
-    </div>
+  <mat-sidenav #sidenav class="sidenav">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/fishes">
+        View Fishes
+      </a>
+      <a mat-list-item routerLink="/insects">
+        View Insects
+      </a>
+      <a mat-list-item routerLink="/fossils">
+        View Fossils
+      </a>
+    </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <button (click)="sidenav.toggle()">CLICK ME</button>
+  <mat-sidenav-content class="sidenav-content">
     <app-view-critter></app-view-critter>
+    <button mat-raised-button [color]="Color.ACCENT" (click)="sidenav.toggle()">
+      CLICK ME
+    </button>
   </mat-sidenav-content>
 </mat-sidenav-container>

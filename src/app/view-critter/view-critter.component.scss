@@ -1,12 +1,12 @@
 .container {
   display: block;
-  height: 100%;
-  max-width: 60%;
+  max-width: 70%;
   margin: 1rem auto;
 }
 
 .image-container {
-  text-align: center;
+  background-size: cover;
+  max-height: 400px;
 }
 
 .critter-image {
@@ -21,6 +21,18 @@
   width: 100%;
 }
 
-.example-full-width {
+.search-field {
+  width: 50%;
+}
+
+.card-container {
+  max-width: 400px;
+}
+
+mat-grid-tile {
+  background-color: lightblue;
+}
+
+table {
   width: 100%;
 }

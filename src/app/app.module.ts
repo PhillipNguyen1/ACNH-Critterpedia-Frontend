@@ -4,6 +4,12 @@ import {
   MatCardModule,
   MatSidenavModule,
   MatInputModule,
+  MatButtonModule,
+  MatListModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatTableModule,
 } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,6 +30,12 @@ const MATERIAL_IMPORTS = [
   MatCardModule,
   MatSidenavModule,
   MatInputModule,
+  MatButtonModule,
+  MatListModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatTableModule,
 ];
 
 @NgModule({

@@ -13,9 +13,9 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="sidenav-content">
-    <app-view-critter></app-view-critter>
     <button mat-raised-button [color]="Color.ACCENT" (click)="sidenav.toggle()">
       CLICK ME
     </button>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -10,10 +10,6 @@
   height: auto;
 }
 
-.card-container {
-  max-width: 400px;
-}
-
 mat-grid-tile {
   background-color: lightblue;
 }
@@ -65,27 +61,16 @@ tr.element-row:not(.expanded-row):active {
   justify-content: flex-start;
 }
 
-.image-container {
-  min-width: 80px;
-  font-weight: lighter;
-  margin: 8px 0;
-  height: 104px;
-}
-
-.element-symbol {
-  font-weight: bold;
-  font-size: 40px;
-  line-height: normal;
+.icon-container {
+  height: 70px;
 }
 
 .element-description {
   width: 100%;
-  margin: 8px 0 16px 8px;
-}
-
-.element-description-attribution {
-  margin-top: 8px;
-  opacity: 0.5;
+  margin: 1rem 0 1rem 1rem;
+  padding: 1rem;
+  border-left: 4px solid green;
+  font-style: italic;
 }
 
 .critter-image {
@@ -95,22 +80,4 @@ tr.element-row:not(.expanded-row):active {
 
 .filter {
   width: 25%;
-}
-
-.seasonality-table {
-  width: 35%;
-}
-
-.seasonality-table,
-.seasonality-data {
-  border: 1px solid black;
-}
-
-.active-season {
-  background-color: #b2ebf2; // TODO
-}
-
-.quote {
-  margin-top: 0px;
-  font-style: italic;
 }

@@ -1,26 +1,29 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
-  MatToolbarModule,
-  MatCardModule,
-  MatSidenavModule,
-  MatInputModule,
   MatButtonModule,
-  MatListModule,
+  MatCardModule,
   MatExpansionModule,
   MatGridListModule,
   MatIconModule,
-  MatTableModule,
-  MatSlideToggleModule,
+  MatInputModule,
+  MatListModule,
   MatRadioModule,
+  MatSidenavModule,
+  MatSlideToggleModule,
+  MatTableModule,
+  MatToolbarModule,
 } from '@angular/material';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ViewCritterComponent } from './view-critter/view-critter.component';
-import { HttpClientModule } from '@angular/common/http';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ViewBugsComponent } from './view-bugs/view-bugs.component';
+import { ViewFishesComponent } from './view-fishes/view-fishes.component';
 
 const ANGULAR_IMPORTS = [
   BrowserModule,
@@ -28,6 +31,7 @@ const ANGULAR_IMPORTS = [
   HttpClientModule,
   FormsModule,
   ReactiveFormsModule,
+  AppRoutingModule,
 ];
 
 const MATERIAL_IMPORTS = [
@@ -43,13 +47,15 @@ const MATERIAL_IMPORTS = [
   MatTableModule,
   MatSlideToggleModule,
   MatRadioModule,
+  MatPaginatorModule,
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ViewCritterComponent,
+    ViewFishesComponent,
+    ViewBugsComponent,
     SidenavComponent,
   ],
   imports: [...ANGULAR_IMPORTS, ...MATERIAL_IMPORTS],

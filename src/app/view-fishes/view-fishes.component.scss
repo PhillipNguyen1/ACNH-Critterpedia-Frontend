@@ -1,0 +1,83 @@
+.container {
+  display: block;
+  max-width: 70%;
+  margin: 1rem auto;
+}
+
+.critter-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+mat-grid-tile {
+  background-color: lightblue;
+}
+
+table {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.radio-button-margin {
+  margin-right: 1rem;
+}
+
+tr.detail-row {
+  height: 0;
+}
+
+tr.element-row:not(.expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.element-row:not(.expanded-row):active {
+  background: #efefef;
+}
+
+.element-row td {
+  border-bottom-width: 0;
+}
+
+.element-detail {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.icon-container {
+  height: 70px;
+}
+
+.element-description {
+  width: 100%;
+  margin: 1rem 0 1rem 1rem;
+  padding: 1rem;
+  border-left: 4px solid green;
+  font-style: italic;
+}
+
+.critter-image {
+  width: inherit;
+  height: inherit;
+}
+
+.filter {
+  width: 25%;
+}
